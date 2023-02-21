@@ -1,0 +1,25 @@
+on:
+  push:
+    branches:
+      - "**"
+
+name: Dummy workflow
+
+concurrency: 
+  group: ${{ github.ref }}
+  cancel-in-progress: true
+  
+jobs:
+  deploy:
+    name: Do something
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Echo
+        id: echo
+        shell: bash
+        run: |
+          echo "GH dummy workflow executed."
