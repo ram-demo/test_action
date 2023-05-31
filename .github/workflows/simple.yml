@@ -36,3 +36,7 @@ jobs:
           echo wait
           sleep 20m
           echo test, and deploy your project.
+      
+      # Intentional Fail to test webhook
+      - name: Intentional Failure
+        run: exit 1
