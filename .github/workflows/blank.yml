@@ -22,4 +22,4 @@ jobs:
         id: echo
         shell: bash
         run: |
-          echo "GH dummy workflow executed."
+          echo "GH dummy workflow executed"
